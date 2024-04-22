@@ -27,3 +27,11 @@ curl -o ./part-1-output http://localhost:9393/raw
 ```bash
 docker logs 4d4ff5fd52df >& part-1-logs
 ```
+
+# Part - II Solution
+
+Created docker-compose file and csvserver with Environment variable.
+
+```bash 
+docker-compose up
+```
