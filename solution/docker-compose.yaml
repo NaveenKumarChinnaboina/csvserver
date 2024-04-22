@@ -8,3 +8,11 @@ services:
       - ./inputFile:/csvserver/inputdata
     env_file:
       - csvserver.env
+
+  prometheus:
+    image: prom/prometheus:v2.45.2
+    volumes:
+      - ./prometheus:/etc/prometheus
+    command: --web.enable-lifecycle  --config.file=/etc/prometheus/prometheus.yml --storage.tsdb.path=/prometheus
+    ports:
+      - "9090:9090"
