@@ -35,3 +35,27 @@ Created docker-compose file and csvserver with Environment variable.
 ```bash 
 docker-compose up
 ```
+# Part -III Solution
+
+Update the Docker Compose Configuration
+
+Create Prometheus configuration file , which tells Prometheus where to find the metrics to scape.
+
+```bash
+mkdir -p ./prometheus
+nano ./prometheus/prometheus.yml
+```
+
+Save the configurations and Run the docker compose.
+
+```bash
+docker-compose up
+```
+Verify the Prometheus Configuration
+
+```
+http://localhost:9090
+```
+In prometheus dashboard - Query the 'csvserver_records' and execute.
+
+![alt text](<Screenshot from 2024-04-22 12-56-33.png>)
